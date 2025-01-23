@@ -366,7 +366,7 @@ html, body {
   background-position: top;
   position: absolute;
   bottom: 0;
-  background-image: url("../images/envelopeb.png");
+  background-image: url("envelopeb.png");
 }
 .intro .top {
   z-index: 3100;
@@ -405,7 +405,7 @@ html, body {
   width: 100%;
 }
 .intro.black .bottom {
-  background-image: url("../images/envelopebn.png");
+  background-image: url("envelopebn.png");
 }
 
 .player {
@@ -1692,7 +1692,7 @@ footer p a {
     width: 100%;
   }
   .intro .bottom {
-    background-image: url("../images/envelopebm.png");
+    background-image: url("envelopebm.png");
   }
   .cover {
     max-height: 600px;
@@ -1898,7 +1898,7 @@ footer p a {
     width: 100%;
   }
   .intro .bottom {
-    background-image: url("../images/envelopebm.png");
+    background-image: url("envelopebm.png");
   }
   .cover {
     max-height: 650px;
@@ -2070,7 +2070,7 @@ footer p a {
     width: 60%;
   }
   .intro .bottom {
-    background-image: url("../images/envelopebm.png");
+    background-image: url("envelopebm.png");
   }
   .cover .text h2 {
     font-size: 40px;

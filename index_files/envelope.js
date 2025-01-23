@@ -7,6 +7,4 @@ function animar() {
     setInterval(() => {
            document.getElementById("intro").style.display = "none";
     }, 1000);
-    document.getElementById("player").play();
-    document.getElementById("button").innerHTML = "<div class='icon'><img src='../assets/images/play.gif'/></div>";
 };

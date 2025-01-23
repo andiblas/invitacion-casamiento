@@ -1,6 +1,6 @@
 var imgs = document.querySelectorAll('#slider .image');
 var currentImg = 0; // index of the first image 
-const interval = 4000; // duration(speed) of the slide
+const interval = 3000; // duration(speed) of the slide
 var timer = setInterval(changeSlide, interval);
 
 function changeSlide(n) {

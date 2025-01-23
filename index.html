@@ -6,7 +6,7 @@
     <meta property="og:title" content="Agos y Andy - 5 de Abril 2025">
     <meta property="og:description" content="¡Nos Casamos!">
     <meta property="og:type" content="website">
-    
+
     <title>Agos y Andy - 5 de Abril 2025</title>
     <link rel="icon" type="image/x-icon" href="./index_files/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -94,6 +94,15 @@
         <div class="bottom" id="bottom"></div>
     </div>
     <script src="./index_files/envelope.js"></script>
+    <script>
+        function scrollToElementID(elementID) {
+            var elem = document.getElementById(elementID);
+            elem.scrollIntoView({
+                block: 'start',
+                behavior: 'smooth'
+            });
+        }
+    </script>
     <header>
         <h1>Agos & Andy</h1>
         <!-- <img src="./index_files/logo.png"> -->
@@ -101,7 +110,8 @@
     <section class="cover">
         <div class="text">
             <h2>¡Nos Casamos!</h2>
-            <p>y queremos compartirlo con vos.</p> <a href="#savethedate"><i class="fal fa-angle-down wow fadeInDown"></i></a>
+            <p>y queremos compartirlo con vos.</p> <a onclick="scrollToElementID('savethedate')"><i
+                    class="fal fa-angle-down wow fadeInDown"></i></a>
         </div>
         <div class="slider" id="slider">
             <div class="image" style="opacity: 0;"><img src="./index_files/IMG_9153.jpg"></div>
@@ -166,9 +176,11 @@
 
             <h2>Nuestra Historia</h2>
             <p style="font-size:16px">
-                Hace más de 16 años, nuestros caminos se cruzaron y se hicieron uno. 
-                <br><br>Juntos recorrimos no solo la vida, sino también caminos y paisajes por el país y el mundo, acumulando hermosos recuerdos.
-                Decidimos dar el próximo paso 💍, porque creemos que el amor que sentimos desde el primer día merece ser celebrado y consolidado en este nuevo capítulo.
+                Hace más de 16 años, nuestros caminos se cruzaron y se hicieron uno.
+                <br><br>Juntos recorrimos no solo la vida, sino también caminos y paisajes por el país y el mundo,
+                acumulando hermosos recuerdos.
+                Decidimos dar el próximo paso 💍, porque creemos que el amor que sentimos desde el primer día merece ser
+                celebrado y consolidado en este nuevo capítulo.
             </p>
             <!--<a href="#">Ver más</a>-->
         </div>

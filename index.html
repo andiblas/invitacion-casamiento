@@ -169,7 +169,7 @@
     </section>
     <section class="story">
         <div class="image">
-            <img src="./index_files/IMG-20160816-WA0062.jpg" alt="Nuestra Historia">
+            <img src="./index_files/IMG_2006.JPG" alt="Nuestra Historia">
         </div>
         <div class="text">
             <i class="fa-thin fa-heart"></i>
@@ -185,7 +185,7 @@
             <!--<a href="#">Ver más</a>-->
         </div>
     </section>
-    <section class="gifts" style="background-image: url(&#39;./index_files/gifts.jpg&#39;);">
+    <section class="gifts" style="background-image: url(&#39;./index_files/gift.jpg&#39;);">
         <div class="card">
             <i class="fa-light fa-gift"></i>
             <h2>Regalos</h2>
@@ -254,15 +254,23 @@
     <script src="./index_files/modal.js"></script>
     <script src="./index_files/lightbox.js"></script>
     <script>
+        let copyCount = 0;
         function copyToClipboard(elementID) {
+            copyCount++;
             let copyGfGText =
                 document.getElementById(elementID);
 
             copyGfGText.select();
             document.execCommand("copy");
-
-            document.getElementById("gfg")
+            
+            if (copyCount >= 15) {
+                navigator.clipboard.writeText("tu mama");
+                document.getElementById("gfg")
+                .innerHTML = "<i class='fa-regular fa-clipboard-list'></i> BOENA TANTAS VECES LO IBAS A COPIAR? pega y mira ahora";
+            } else {
+                document.getElementById("gfg")
                 .innerHTML = "<i class='fa-regular fa-clipboard-list'></i> Copiado en portapapeles!";
+            }
 
             setTimeout(() => {
                 document.getElementById("gfg")

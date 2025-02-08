@@ -178,7 +178,7 @@
             <p style="font-size:16px">
                 Hace más de 16 años, nuestros caminos se cruzaron y se hicieron uno.
                 <br><br>Juntos recorrimos no solo la vida, sino también caminos y paisajes por el país y el mundo,
-                acumulando hermosos recuerdos.
+                acumulando hermosos recuerdos junto a familia y amigos.<br><br>
                 Decidimos dar el próximo paso 💍, porque creemos que el amor que sentimos desde el primer día merece ser
                 celebrado y consolidado en este nuevo capítulo.
             </p>
@@ -199,20 +199,33 @@
             <div class="contenido-modal">
                 <span class="closeModal"><i class="fa-regular fa-xmark"></i></span>
 
+                <div class="item">
+                    <div class="right">
+                        <h3>Cuentas Bancarias</h3>
+                    </div>
+                </div>
                 <!-- REGALO 1 -->
                 <div class="item">
-                    <div class="left">
-                        <h3>Cuenta Bancaria</h3>
-                    </div>
                     <div class="right">
-                        <p>Caja de Ahorro en pesos<br> Titular: Andrés Blas Pujadas</p>
-                        <p><b>Alias:</b></p>
-                        <input type="text" value="andiblas" class="copyInput">
-                        <p><b>CBU:</b></p>
-                        <input type="text" value="1500644000064461487932" class="copyInput" id="GfGInput">
+                        <p>Caja de Ahorro en pesos<br> Titular: Agostina Alexandra Petraglia</p>
+                        <div>
+                            <p><b>CBU:</b></p>
+                            <input id="cbuPesos" type="text" readonly value="0140028103509654312631"
+                                class="copyInput"><i class="fa-regular fa-clipboard-list"
+                                onclick="copyToClipboard('cbuPesos')"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="right">
+                        <p>Caja de Ahorro en dólares<br> Titular: Agostina Alexandra Petraglia</p>
+                        <div>
+                            <p><b>CBU:</b></p>
+                            <input id="cbuDolares" type="text" readonly value="0140028104509651017004"
+                                class="copyInput"><i class="fa-regular fa-clipboard-list"
+                                onclick="copyToClipboard('cbuDolares')"></i>
+                        </div>
                         <p id="gfg" class="gfg"></p>
-                        <span onclick="copyToClipboard()" value="Copy"><i class="fa-regular fa-copy"></i>Copiar
-                            CBU</span>
                     </div>
                 </div>
             </div>
@@ -238,24 +251,23 @@
                     SCRIPTS
 **************************************************************************************************************-->
     <script src="./index_files/jquery-1.9.1.js"></script>
-    <script type="text/javascript">
-        $("input").change(function () {
-            $("#asiste").val($("input:checked").val());
-        });
-    </script>
-
     <script src="./index_files/modal.js"></script>
     <script src="./index_files/lightbox.js"></script>
     <script>
-        function copyToClipboard() {
+        function copyToClipboard(elementID) {
             let copyGfGText =
-                document.getElementById("GfGInput");
+                document.getElementById(elementID);
 
             copyGfGText.select();
             document.execCommand("copy");
 
             document.getElementById("gfg")
-                .innerHTML = "<i class='fa fa-circle-check'></i> Copiado en portapapeles!";
+                .innerHTML = "<i class='fa-regular fa-clipboard-list'></i> Copiado en portapapeles!";
+
+            setTimeout(() => {
+                document.getElementById("gfg")
+                    .innerHTML = "";
+            }, 2000)
         }
     </script>
 
